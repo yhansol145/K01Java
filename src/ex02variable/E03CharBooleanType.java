@@ -36,6 +36,7 @@ public class E03CharBooleanType {
 		
 		bn3 = '가' > 30000; 
 		System.out.println("bn3="+ bn3);
+		System.out.println(true);
 	}
 
 }
