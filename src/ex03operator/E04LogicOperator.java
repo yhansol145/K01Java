@@ -3,13 +3,6 @@ package ex03operator;
 public class E04LogicOperator {
 
 	public static void main(String[] args) {
-
-		/*
-		논리연산자
-			&& : 논리And. 양쪽 모두가 true일때만 true를 반환하고, 나머지는 false를 반환하는 연산자
-			|| : 논리Or. 한쪽만 true이면 true를 반환하고, 양쪽모두 false일때만 false를 반환하는 연산자
-			!  : 논리Not. 반대의 논리를 반환하는 연산자
-		 */
 		
 		int num1=10, num2=20;
 		
