@@ -1,4 +1,4 @@
-package ex03oerator;
+package ex03operator;
 
 public class E01ArithOperator {
 
