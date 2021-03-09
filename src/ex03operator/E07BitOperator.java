@@ -6,8 +6,7 @@ public class E07BitOperator {
 
 		int num1 = 5; 
 		int num2 = 3; 
-		int num3 =-1; 
-					 
+		int num3 =-1;
 		
 		System.out.println("비트AND:"+ (num1 & num2)); 
 		System.out.println("비트OR:"+ (num1 | num2)); 
