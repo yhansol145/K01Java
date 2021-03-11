@@ -61,5 +61,7 @@ public class E02MethodType01 {
 		noParamNoReturn();
 		noParamNoReturn2();
 		noParamNoReturn3();
+		noParamNoReturn3();
+
 	}
 }
