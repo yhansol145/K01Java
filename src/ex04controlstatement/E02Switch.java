@@ -2,6 +2,7 @@ package ex04controlstatement;
 
 import java.util.Scanner;
 
+<<<<<<< HEAD
 /*
 Switch문
 	if문처럼 조건에 따라 분기하는 제어문으로, 정수식의 값과
@@ -78,6 +79,44 @@ public class E02Switch {
 		여러 case를 동시에 처리할때는 break문없이 case를 나열한다.
 		if문에서 ||(논리Or)를 사용하는것과 동일하다.
 		 */
+=======
+public class E02Switch {
+
+	public static void main(String[] args) {
+
+		/*
+		Scanner클래스
+			: JDK5.0부터 추가된 클래스로 키보드를 통해 사용자로부터 값을 입력받을때 사용한다.
+			nextLine() : 문자열을 입력받음
+			nextInt() : 정수를 입력받음
+		 */
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("숫자를 입력하세요.");
+		int iNum = scanner.nextInt();
+		System.out.println("입력한 숫자는:"+ iNum);
+		
+		int remain = iNum % 3;
+		
+		switch (remain) {
+		case 0:
+			System.out.println("나머지는 0입니다.");
+			break;
+		case 1:
+			System.out.println("나머지는 1입니다.");
+			break;
+		default:
+			System.out.println("나머지는 2입니다.");
+		}
+		
+		String title = "자바";
+		switch(title) {
+		case "자바":System.out.println("자바 좋아");
+			break;
+		case "JAVA":System.out.println("JAVA Goood");
+			break;
+		}
+		
+>>>>>>> refs/remotes/origin/master
 		int season = 4;
 		switch(season) {
 		case 3:case 4:case 5: // => if(season==3 || season==4 || .....)

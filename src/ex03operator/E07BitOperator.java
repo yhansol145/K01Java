@@ -4,6 +4,7 @@ public class E07BitOperator {
 
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		/*
 		비트연산자 : 자료를 bit단위로 논리연산한다.
 		& : 비트And. 좌우가 둘다 1일 때만 1을 반환. 나머지는 0
@@ -27,6 +28,16 @@ public class E07BitOperator {
 		System.out.println("비트OR:"+ (num1 | num2)); // 결과7
 		System.out.println("비트XOR:"+ (num1 ^ num2)); //결과6
 		System.out.println("비트Not:"+ (~num3)); //결과0
+=======
+		int num1 = 5; 
+		int num2 = 3; 
+		int num3 =-1;
+		
+		System.out.println("비트AND:"+ (num1 & num2)); 
+		System.out.println("비트OR:"+ (num1 | num2)); 
+		System.out.println("비트XOR:"+ (num1 ^ num2)); 
+		System.out.println("비트Not:"+ (~num3)); 
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

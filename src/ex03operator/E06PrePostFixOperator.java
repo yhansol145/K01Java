@@ -4,6 +4,7 @@ public class E06PrePostFixOperator {
 
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		/*
 		증감연산자
 			: 변수를 +1 혹은 -1 한것과 같은 결과를 반환한다.
@@ -45,6 +46,28 @@ public class E06PrePostFixOperator {
 		System.out.println("후위증가/감소시");
 		System.out.printf("num1=%d, num2=%d, num3=%d", num1, num2, num3);
 		// 최종결과 : 7, 7, 8
+=======
+		int num1 = 7;
+		int num2, num3;
+		
+		num2 = ++num1;
+						
+		
+		num3 = --num1;
+		System.out.println("전위증가/감소시");
+		System.out.printf("num1=%d, num2=%d, num3=%d %n%n", num1, num2, num3);
+
+		
+		num1 = 7;
+		
+		num2 = num1++;
+		
+		num3 = num1--;
+		
+		
+		System.out.println("후위증가/감소시");
+		System.out.printf("num1=%d, num2=%d, num3=%d", num1, num2, num3);
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

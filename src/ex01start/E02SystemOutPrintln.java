@@ -5,6 +5,7 @@ public class E02SystemOutPrintln {
 	public static void main(String[] args) {
 		
 		int num1 = 100;
+<<<<<<< HEAD
 		/*
 		System.out.println()
 			: 내용을 출력한 후 자동으로 줄바꿈 처리를 한다.
@@ -43,6 +44,24 @@ public class E02SystemOutPrintln {
 		
 		System.out.println("num1 은 "+ num1 +" 입니다.");
 		// 변수와 문자열을 연결해서 출력
+=======
+		
+		System.out.println("num1="+ num1);
+		System.out.print("num1="+ num1 +"\n");
+		System.out.printf("num1=%d%n", num1);
+			
+		System.out.println(7);
+		System.out.println(3.14);
+
+		System.out.println(3 + 5); 
+		System.out.println(3.5 + 5.1); 
+		
+		System.out.println("3+5="+ 8);
+		System.out.println(3.15 +"는 실수입니다.");
+		System.out.println("3+5" + " 의 연산결과는 8입니다.");
+		
+		System.out.println("num1 은 "+ num1 +" 입니다.");
+>>>>>>> refs/remotes/origin/master
 
 	}
 

@@ -4,6 +4,7 @@ public class E05ConstantVar {
 
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		/*
 		상수 : 저장된 값이 변하지 않는 메모리의 한 종류
 			선언방법 : final 자료형 상수명 = 초기값;
@@ -49,6 +50,28 @@ public class E05ConstantVar {
 		user = PAPER;
 		System.out.println("Computer Win");
 
+=======
+		final double PI = 3.14;
+		System.out.println("PI(원주율)"+ PI);
+		
+		final String NICK_NAME;
+		NICK_NAME = "코스모82기";
+		System.out.println("우리는 "+NICK_NAME);
+		
+		final int SCISSOR = 1;
+		final int ROCK = 2;
+		final int PAPER = 3;
+		
+		int computer, user;
+		
+		computer = 1;
+		user = 3;
+		System.out.println("컴퓨터가 이겼습니다.");
+		
+		computer = SCISSOR;
+		user = PAPER;
+		System.out.println("Computer Win");
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

@@ -4,6 +4,7 @@ public class E05ShortCircuitEvaluation {
 
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		/*
 		SCE(Short-Circuit Evaluation)
 			: 하나의 조건검사만으로 결과를 알 수 있는 경우 Java 컴파일러는 뒤의 조건을 수행하지 않고 건너뛰게 된다. 
@@ -32,6 +33,19 @@ public class E05ShortCircuitEvaluation {
 		num2는 초기값이 0을 유지하게 된다. 만약 num2의 값이 프로그램에
 		영향을 미치게된다면 이부분은 주의해야 한다.
 		 */
+=======
+		int num1=0, num2=0;
+		boolean result;
+		
+		result = (num1+=10)<0 && (num2+=10)>0;
+		System.out.println("result"+ result);
+		System.out.println("num1="+ num1 +", num2="+ num2);
+		
+		result = (num1+=10)>0 || (num2+=10)>0;
+		System.out.println("result"+ result);
+		System.out.println("num1="+ num1 +", num2="+ num2);
+		
+>>>>>>> refs/remotes/origin/master
 	}
 
 }

@@ -3,6 +3,7 @@ package ex01start;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+<<<<<<< HEAD
 // 자바파일의 구조(이것은 라인단위 주석입니다.)
 /*
 1. 패키지 선언부 : 클래스를 종류별로 묶어서 관리하기 위한 선언으로
@@ -32,3 +33,19 @@ public class E01JavaStruct {
 	}
 
 }
+=======
+public class E01JavaStruct {
+
+	public static void main(String[] args) {
+
+		Date toDayOfDate = new Date();
+		System.out.println("오늘날"+ toDayOfDate);
+		
+		SimpleDateFormat simple =
+				new SimpleDateFormat("yyyy-MM--dd HH:mm:ss");
+		String toDayString = simple.format(toDayOfDate);
+		System.out.println("변형된날짜:"+ toDayString);
+	}
+
+}
+>>>>>>> refs/remotes/origin/master

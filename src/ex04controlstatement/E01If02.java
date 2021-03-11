@@ -1,5 +1,6 @@
 package ex04controlstatement;
 
+<<<<<<< HEAD
 /*
 if문
 	형식2
@@ -37,6 +38,24 @@ public class E01If02 {
 		시나리오] 숫자를 홀/짝인지 먼저 판단한 후 100 이상인지를 
 			판단하는 프로그램을 if ~ else 구문을 이용하여 작성하시오.
 		 */
+=======
+public class E01If02 {
+
+	public static void main(String[] args) {
+
+		int num = 101;
+		
+		if(num%2 == 0) {
+			System.out.println("짝수입니다.");
+		}
+		else {
+			System.out.println("홀수입니다.");
+		}
+		
+		String numberResult = (num%2==0) ? "짝수임":"홀수임";
+		System.out.println("숫자 "+num+"은 "+ numberResult);
+		
+>>>>>>> refs/remotes/origin/master
 		int num2 = 120;
 		if(num2%2 == 0) { // 짝수일때...
 			if(num2>=100) {

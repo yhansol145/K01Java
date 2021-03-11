@@ -93,6 +93,7 @@ public class E03While {
 			System.out.println(); //한행을 출력한 후 줄바꿈 처리
 			m++;
 		}
+<<<<<<< HEAD
 
 		
 		
@@ -100,6 +101,8 @@ public class E03While {
 		
 		
 		
+=======
+>>>>>>> refs/remotes/origin/master
 		
 	}
 }
