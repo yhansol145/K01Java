@@ -16,14 +16,23 @@ package ex06array;
 public class QuArray1To10 {
 
 	public static void main(String[] args) {
-		int [] arr = new int [10];
-		int arrsum = 0;
-		System.out.println("초기화된 배열 요소");
+		
+		//크기가 10인 배열 선언
+		int[] arr = new int[10];
+		
+		//배열의 1~10까지의 정수로 초기화
 		for(int i=0 ; i<arr.length ; i++) {
 			arr[i] = i+1;
-			System.out.print(arr[i]);
-			arrsum += arr[i];
 		}
-		System.out.println("\n배열전체요소의합 :"+ arrsum);
+		
+		int sum = 0;
+		//배열 출력
+		for(int i=0 ; i<arr.length ; i++) {
+			System.out.print(arr[i]+" ");
+			sum += arr[i]; //누적 합 구하기
+		}
+		
+		System.out.println("\n배열 전체 요소의 합:"+ sum);
+
 	}
 }

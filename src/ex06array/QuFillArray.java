@@ -5,43 +5,50 @@ import java.util.Scanner;
 /*
 문제3) 홀수/짝수 구분하여 배열채우기
 파일명 : QuFillArray.java
-길이가 10인 배열을 선언한후 총 10개의 정수를 입력받아 순서대로 저장한다. (첫번째배열)
+길이가 10인 배열을 선언한후 총 10개의 정수를 입력받아 순서대로 저장한다.(첫번째배열)
 그리고 순서대로 저장된 숫자들을 홀수는 배열의 앞에서부터
- 채워나가고 짝수는 배열의 끝에서부터 채워나간다.(두번째배열)
-
-실행결과]
-1번째 정수를 입력하세요:2
-2번째 정수를 입력하세요:4
-3번째 정수를 입력하세요:5
-4번째 정수를 입력하세요:3
-5번째 정수를 입력하세요:2
-6번째 정수를 입력하세요:9
-7번째 정수를 입력하세요:7
-8번째 정수를 입력하세요:8
-9번째 정수를 입력하세요:5
-10번째 정수를 입력하세요:1
-순서대로입력된결과
-2 4 5 3 2 9 7 8 5 1 
-홀수/짝수 구분입력결과
-5 3 9 7 5 1 8 2 4 2 
+채워나가고 짝수는 배열의 끝에서부터 채워나간다.(두번째배열)
  */
 public class QuFillArray {
 	
 	public static void main(String[] args) {
 
+		//사용자 입력을 위한 객체생성
 		Scanner scanner = new Scanner(System.in);
 		
-		int[] arr = new int[10];
+		//입력받은 정수를 순서대로 입력할 배열
+		int[] arr1 = new int[10];
+		//홀, 짝을 구분해서 입력할 배열
+		int[] arr2 = new int[10];
+		
+		//arr2배열의 시작인덱스와 마지막인덱스를 저장할 변수(홀,짝 구분)
+		int indexStart = 0;
+		int indexEnd = arr2.length - 1;
 
-		for(int i=0 ; i<arr.length ; i++) {
-			System.out.printf("%d번째 정수를 입력하세요:\n", i+1);
-			arr[i]=scanner.nextInt();
+		for(int i=0 ; i<arr2.length ; i++) {
+			
+			System.out.print("채울 숫자를 입력하세요:");
+			int inputNum = scanner.nextInt();
+			
+			//첫번째 배열에는 입력한 순서대로 채워준다.
+			arr1[i] = inputNum;
+			
+			if(inputNum%2==1) {
+				//홀수이면..앞에서부터 채우고 인덱스 1증가
+				arr2[indexStart++] = inputNum;
+			}
+			else {
+				//짝수이면..뒤에서부터 채우고 인덱스 1감소
+				arr2[indexEnd--] = inputNum;
+			}
 		}
-		System.out.println("순서대로 입력된 결과");
-		for(int i=0 ; i<arr.length ; i++) {
-			System.out.printf(arr[i]+" ");
+		System.out.println("첫번째 배열 출력");
+		for(int i=0 ; i<arr1.length ; i++) {
+			System.out.print(arr1[i]+" ");
 		}
-		System.out.println("\n홀수/짝수 구분입력결과");
+		System.out.println("\n두번째 배열 출력");
+		for(int i=0 ; i<arr2.length ; i++) {
+			System.out.print(arr2[i]+" ");
+		}	
 	}
-
 }
