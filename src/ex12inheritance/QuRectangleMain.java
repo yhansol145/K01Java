@@ -34,6 +34,7 @@ class Square extends Rectangle {
 	
 	int side;
 	public Square(int side) {
+		super(0,0);
 		this.side = side;
 	}
 	
