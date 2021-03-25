@@ -110,8 +110,66 @@ public class Ex02PreDefineException {
 			System.out.println("toDay 참조변수는 null입니다.");
 			System.out.println("예외메세지:"+ e.getMessage());
 		}
+		
+		/*
+		ArithmeticException : 수학적 계산이 불가능한 경우 발생되는 예외
+		 */
+		System.out.println("### ArithmeticException ###");
+		int result = 10;
+		try {
+			result = result / 0; //0으로는 숫자를 나눌 수 없다.
+			System.out.println("결과는:"+ result);
+		}
+		catch(ArithmeticException e) {
+			System.out.println("0으로 나눌 수 없습니다.");
+			System.out.println("예외메세지:"+ e.getMessage());
+		}
+		
+		/*
+		ClassCastException : 형변환이 불가능한 경우 발생되는 예외
+		 */
+		Object object = new Object();
+		try {
+			//순수한 Object객체이므로 다른 형으로 형변환할 수 없다.
+			String strObject = (String)object;
+		}
+		catch(ClassCastException e) {
+			System.out.println("형변환 할 수 없습니다.");
+			System.out.println(e);
+			System.out.println(e.getMessage());
+			e.printStackTrace(); //<- 개발 시 가장 많이 사용함
+		}
+		System.out.println("==ClassCastException발생후==");
+		
+		
 		System.out.println("끝");
 		
-	}
+		String str = "형변환되나요?";
+		boolean castFlag = myClassCasting(str);
+		if(castFlag==true)
+			System.out.println("됩니다요..");
+		else
+			System.out.println("안되네요..ㅜㅜ;");
 
+	}////end of main
+
+	/*
+	String객체가 인자로 전달되면서 매개변수를 통해 Object로
+	형변환되기 때문에 여기에서 상속관계가 확인되어 매개변수 o는
+	String으로 형변환이 가능해지게 된다.
+	 */
+	public static boolean myClassCasting(Object o) {
+		if(o instanceof String) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
+	
 }
