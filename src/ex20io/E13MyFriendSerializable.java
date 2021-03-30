@@ -1,13 +1,19 @@
 package ex20io;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Scanner;
 
 /*
-친구를 표현한 최상위 클래스로 해당 프로그램에서는
-Friend 클래스로 객체생성은 하지 않는다.
-상속의 목적으로만 정의된 클래스이다.
+연습문제] 해당 프로그램은 친구의 정보를 저장하게 된다. 프로그램
+종료시 Friend타입의 객체배열에 저장된 친구의 정보를 파일의 형태로
+저장할 수 있도록 직렬화 하시오.
+-저장될파일명 : friend_info.obj
  */
-class Friend {
+class Friend implements Serializable {
 	
 	//멤버변수
 	String name; //이름
@@ -123,11 +129,12 @@ public class E13MyFriendSerializable {
 	호출하는 정도로만 구성한다. main메소드는 단지 프로그램의
 	시작점 정도의 의미만 가지는게 좋다.
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 
 		//프로그램의 비즈니스 로직을 가진 핸들러 객체를 생성한다.
 		FriendInfoHandler handler = new FriendInfoHandler(100);
 		//연락처 정보를 저장할 객체배열의 크기를 100으로 초기화한다.
+
 		
 		//무한루프로 구성하여 사용자가 원하는 시점에 프로그램을 종료시킨다.
 		while(true) {
@@ -160,6 +167,7 @@ public class E13MyFriendSerializable {
 				handler.deleteInfo();
 				break;
 			case 7:
+				handler.saveFriendInfo();
 				//프로그램종료
 				System.out.println("프로그램을 종료합니다.");
 				//main메소드의 종료는 프로그램의 종료로 이어진다.
@@ -300,4 +308,28 @@ class FriendInfoHandler {
 			System.out.println("==데이터("+ deleteIndex+"번)가 삭제되었습니다.==");
 		}
 	}////end of deleteInfo
+	
+	//친구정보를 파일로 저장하기
+	public void saveFriendInfo() {
+		
+		try {
+		//객체를 파일형태로 저장하기 위한 스트림 생성
+		ObjectOutputStream out =
+			new ObjectOutputStream(
+					new FileOutputStream("src/ex20io/friend_info.obj")
+			);
+			
+			/*
+			객체배열에 저장된 친구정보의 갯수만큼 반복하면서 객체를 가져와서
+			순서대로 파일에 저장한다. 
+			 */
+			for(int i=0; i<numOfFriends ; i++) {
+				out.writeObject(myFriends[i]);
+			}
+		}
+		catch(Exception e) {
+			System.out.println("친구정보 파일저장 시 예외발생");
+			e.printStackTrace();
+		}
+	}
 }////end of FriendInfoHandler
