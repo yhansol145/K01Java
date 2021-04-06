@@ -43,9 +43,17 @@ ResultSet 클래스
 				클래스의 참조변수로 저장해야 한다.
 				 */
 				java.sql.Date regidate = rs.getDate("regidate");
+				
+				/*
+				오라클의 date타입을 getString()으로 추출하면
+				0000-00-00 00:00:00 형태로 시간까지 출력할 수 있다.
+				만약 적당한 크기로 자르고 싶다면 substring()을 사용하면 된다.
+				 */
 				String regidate2 = rs.getString("regidate");
 				String regidate3 =
 				rs.getString("regidate").substring(0,13);
+				
+				//쿼리문에 사용한 별칭을 그대로 쓸 수 있다.
 				String regidate4 = rs.getString("d1");
 				
 				System.out.printf("%s %s %s %s %s %s %s\n",
